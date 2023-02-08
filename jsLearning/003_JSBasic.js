@@ -181,6 +181,6 @@ function Person(name) {
 }
 
 // 修改其原型，将原型塑造为 { getName: [Function (anonymous)] } 这个对象
-// Person.prototype.getName = function () { }
+Person.prototype.getName = function () { }
 let p = new Person('hello')
 console.log(Object.getPrototypeOf(p), p.__proto__, Person.prototype)
