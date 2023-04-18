@@ -1,0 +1,41 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JavaScript for Everyone:DOM</title>
+    <link href="styles/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Asabeneh Yetayeh challenges in 2020</h1>
+        <h2>30DaysOfJavaScript Challenge</h2>
+        <ul>
+            <li>30DaysOfPython Challenge Done</li>
+            <li>30DaysOfJavaScript Challenge Ongoing</li>
+            <li>30DaysOfReact Challenge Coming</li>
+            <li>30DaysOfFullStack Challenge Coming</li>
+            <li>30DaysOfDataAnalysis Challenge Coming</li>
+            <li>30DaysOfReactNative Challenge Coming</li>
+            <li>30DaysOfMachineLearning Challenge Coming</li>
+        </ul>
+    </div>
+    <script>
+        const liList = document.querySelectorAll('li')
+        console.log(liList)
+        liList.forEach((item, index) => {
+            if (index === 0) {
+                item.style.backgroundColor = '#21bf73';
+
+            } else if (index === 1) {
+                item.style.backgroundColor = '#fddb3a';
+
+            } else {
+                item.style.backgroundColor = '#fd5e53';
+            }
+        })
+    </script>
+</body>
+
+</html>
