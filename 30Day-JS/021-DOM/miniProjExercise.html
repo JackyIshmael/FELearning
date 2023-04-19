@@ -4,13 +4,13 @@
 
 <head>
     <title>JavaScript for Everyone:DOM</title>
-    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/miniProjExercise.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="wrapper">
-        <h1>Asabeneh Yetayeh challenges in <span class="artText">2020</span></h1>
-        <h2>30DaysOfJavaScript Challenge</h2>
+        <h1 id="bigTitle">Asabeneh Yetayeh challenges in <span id="artText">2020</span></h1>
+        <h2 id="secondTitle">30DaysOfJavaScript Challenge</h2>
         <p class="time" id="bj-time"></p>
         <ul>
             <li>
@@ -58,12 +58,13 @@
             }
         })
 
-        const artYear2020 = document.getElementsByClassName('artText');
-        // console.log('正在打印 console.log(artYear2020.style)')
-        // console.log(artYear2020[0])
+        const artYear2020 = document.getElementById('artText');
+        artYear2020.style.fontSize = '100px'
+        // 我理解为 这些样式属性仅触发浏览器的重绘，因此可以允许直接赋值
+        artYear2020.style.height = '100px'
+
         function changeDateTimeColor() {
-            artYear2020[0].style.color = getRandomColor()
-            // console.log(artYear2020[0].style.color);
+            artYear2020.style.color = getRandomColor()
         }
 
         setInterval(changeDateTimeColor, 1000);
