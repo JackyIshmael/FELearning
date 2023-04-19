@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>世界时钟</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .clock {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>世界时钟</h1>
+    <div class="clock">
+        <h2>北京</h2>
+        <p class="time" id="bj-time"></p>
+    </div>
+    <div class="clock">
+        <h2>伦敦</h2>
+        <p class="time" id="ld-time"></p>
+    </div>
+    <div class="clock">
+        <h2>纽约</h2>
+        <p class="time" id="ny-time"></p>
+    </div>
+
+    <script>
+        function updateTime() {
+            const bjTime = new Date().toLocaleString(undefined, { timeZone: 'Asia/Shanghai' });
+            document.getElementById('bj-time').textContent = bjTime;
+
+            const ldTime = new Date().toLocaleString(undefined, { timeZone: 'Europe/London' });
+            document.getElementById('ld-time').textContent = ldTime;
+
+            const nyTime = new Date().toLocaleString(undefined, { timeZone: 'America/New_York' });
+            document.getElementById('ny-time').textContent = nyTime;
+        }
+
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+
+</html>

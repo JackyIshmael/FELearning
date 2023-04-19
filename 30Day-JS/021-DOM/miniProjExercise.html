@@ -9,32 +9,72 @@
 
 <body>
     <div class="wrapper">
-        <h1>Asabeneh Yetayeh challenges in 2020</h1>
+        <h1>Asabeneh Yetayeh challenges in <span class="artText">2020</span></h1>
         <h2>30DaysOfJavaScript Challenge</h2>
+        <p class="time" id="bj-time"></p>
         <ul>
-            <li>30DaysOfPython Challenge Done</li>
-            <li>30DaysOfJavaScript Challenge Ongoing</li>
-            <li>30DaysOfReact Challenge Coming</li>
-            <li>30DaysOfFullStack Challenge Coming</li>
-            <li>30DaysOfDataAnalysis Challenge Coming</li>
-            <li>30DaysOfReactNative Challenge Coming</li>
-            <li>30DaysOfMachineLearning Challenge Coming</li>
+            <li>
+                <p class="titleFirst">30DaysOfPython Challenge Done</p>
+            </li>
+            <li>
+                <p class="titleFirst">30DaysOfJavaScript Challenge Ongoing</p>
+            </li>
+            <li>
+                <p class="titleFirst">30DaysOfReact Challenge Coming</p>
+            </li>
+            <li>
+                <p class="titleFirst">30DaysOfFullStack Challenge Coming</p>
+            </li>
+            <li>
+                <p class="titleFirst">30DaysOfDataAnalysis Challenge Coming</p>
+            </li>
+            <li>
+                <p class="titleFirst">30DaysOfReactNative Challenge Coming</p>
+            </li>
+            <li>
+                <p class="titleFirst">30DaysOfMachineLearning Challenge Coming</p>
+            </li>
         </ul>
     </div>
     <script>
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
         const liList = document.querySelectorAll('li')
         console.log(liList)
         liList.forEach((item, index) => {
             if (index === 0) {
                 item.style.backgroundColor = '#21bf73';
-
             } else if (index === 1) {
                 item.style.backgroundColor = '#fddb3a';
-
             } else {
                 item.style.backgroundColor = '#fd5e53';
             }
         })
+
+        const artYear2020 = document.getElementsByClassName('artText');
+        // console.log('正在打印 console.log(artYear2020.style)')
+        // console.log(artYear2020[0])
+        function changeDateTimeColor() {
+            artYear2020[0].style.color = getRandomColor()
+            // console.log(artYear2020[0].style.color);
+        }
+
+        setInterval(changeDateTimeColor, 1000);
+
+
+        function updateTime() {
+            const bjTime = new Date().toLocaleString(undefined, { timeZone: 'Asia/Shanghai' });
+            document.getElementById('bj-time').textContent = bjTime;
+        }
+
+        setInterval(updateTime, 1000);
     </script>
 </body>
 

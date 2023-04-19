@@ -1,9 +1,15 @@
 li {
+    display: flex;
     list-style: none;
     margin-top: 2px;
-    margin-bottom: 2px;
-    height: 50;
+    /* margin-bottom: 2px; */
+    height: 50px;
     width: 50%;
+    /* display: block; */
+    margin: 2px auto;
+    align-items: center;
+    flex-direction: row;
+    /* justify-content: center; */
 }
 
 ul {
@@ -19,4 +25,16 @@ ul {
     border-color: black; */
     border: 2px solid red;
     background-color: aqua;
+    /* display: block; */
+    /* margin: 0 auto; */
+}
+
+.titleFirst {
+    margin-left: 12px;
+    font-size: 16px;
+    font-family: "Times New Roman", Times, Georgia, serif;
+}
+
+.artText {
+    font-size: 30px;
 }
