@@ -10,8 +10,13 @@
 <body>
     <div class="wrapper">
         <h1 id="bigTitle">Asabeneh Yetayeh challenges in <span id="artText">2020</span></h1>
-        <h2 id="secondTitle">30DaysOfJavaScript Challenge</h2>
-        <p class="time" id="bj-time"></p>
+        <h2 id="secondTitle"><a href="#">30DaysOfJavaScript Challenge</a></h2>
+        <p id="bj-time"></p>
+        <div>以下为正方形测试</div>
+        <div id="squareTest1">AA</div>
+        <div id="squareTest2">AA</div>
+        <div id="squareTest3">AA</div>
+
         <ul>
             <li>
                 <p class="titleFirst">30DaysOfPython Challenge Done</p>
@@ -37,15 +42,8 @@
         </ul>
     </div>
     <script>
-        function getRandomColor() {
-            const letters = '0123456789ABCDEF';
-            let color = '#';
-            for (let i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
 
+        // 设置列表背景
         const liList = document.querySelectorAll('li')
         console.log(liList)
         liList.forEach((item, index) => {
@@ -58,18 +56,25 @@
             }
         })
 
+        // 设置标题2020随机颜色定时器
         const artYear2020 = document.getElementById('artText');
         artYear2020.style.fontSize = '100px'
-        // 我理解为 这些样式属性仅触发浏览器的重绘，因此可以允许直接赋值
-        artYear2020.style.height = '100px'
-
+        artYear2020.style.height = '120px'
+        artYear2020.style.backgroundColor = 'white'
         function changeDateTimeColor() {
             artYear2020.style.color = getRandomColor()
         }
-
         setInterval(changeDateTimeColor, 1000);
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
 
-
+        // 设置北京时区时钟定时器
         function updateTime() {
             const bjTime = new Date().toLocaleString(undefined, { timeZone: 'Asia/Shanghai' });
             document.getElementById('bj-time').textContent = bjTime;

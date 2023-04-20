@@ -1,7 +1,46 @@
+#bigTitle {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: baseline;
+    /* margin: auto; */
+}
+
+#secondTitle {
+    margin: auto;
+}
+
+#squareTest1 {
+    width: 10%;
+    height: 10vw;
+    background-color: tomato;
+}
+
+#squareTest2 {
+    width: 20%;
+    height: 0;
+    padding-top: 20%;
+    border: 2px solid red;
+    background: orange;
+}
+
+#squareTest3 {
+    width: 30%;
+    overflow: hidden;
+    background: yellow;
+}
+
+#squareTest3::after {
+    content: '嘿嘿嘿啊啊啊啊';
+    display: block;
+    margin-top: 100%;
+}
+
+
 li {
     display: flex;
     list-style: none;
-    margin-top: 2px;
+    /* margin-top: 2px; */
     /* margin-bottom: 2px; */
     height: 50px;
     width: 50%;
@@ -36,5 +75,11 @@ ul {
 }
 
 #artText {
-    font-size: 30px;
+    /* font-size: 30px; */
+    display: block;
+}
+
+#bj-time {
+    /* 避免时钟跳变 */
+    height: 50px;
 }
