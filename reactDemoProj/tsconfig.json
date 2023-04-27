@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "checkJs": true,
+        "declaration": true,
+        "target": "esnext",
+        "module": "esnext",
+        "sourceMap": true,
+        "experimentalDecorators": true,
+        "jsx": "react-native",
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "node",
+        "strict": false,
+        "skipLibCheck": true,
+        "baseUrl": ".",
+        "paths": {
+            "@assets/*": [
+                "src/assets/*"
+            ],
+            "@src/*": [
+                "src/*"
+            ],
+            "@baselist/*": [
+                "src/baselist/*"
+            ]
+        },
+        "types": [
+            "node"
+        ]
+    }
+}
